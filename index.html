@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eduardo Michel Magaña — Software Engineer</title>
+  <meta name="description" content="Computer engineering student and backend & automation developer. Next.js, TypeScript, PostgreSQL, LLM agents and workflow automation in production.">
+  <meta name="author" content="Eduardo Michel Magaña">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Eduardo Michel Magaña — Software Engineer">
+  <meta property="og:description" content="Backend & automation developer building production web apps with Next.js, TypeScript and PostgreSQL.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // Apply saved theme before paint to avoid a flash.
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Eduardo Michel Magaña",
+    "jobTitle": "Backend & Automation Developer",
+    "email": "mailto:michelmm2007@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Villa de Álvarez", "addressRegion": "Colima", "addressCountry": "MX" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de Colima" },
+    "sameAs": [
+      "https://github.com/eduard070512",
+      "https://www.linkedin.com/in/eduardo-michel-maga%C3%B1a"
+    ],
+    "knowsAbout": ["TypeScript", "Next.js", "PostgreSQL", "Java", "C#", "Python", "LLM agents", "Workflow automation"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Eduardo Michel Magaña">
+        <span class="brand-mark" aria-hidden="true">EM</span>
+        <span class="brand-name">Eduardo Michel</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn lang-btn" type="button" id="lang-toggle" aria-label="Cambiar a español">ES</button>
+        <button class="icon-btn" type="button" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.status">Open to software engineering internships</span>
+        </p>
+        <h1 class="hero-title">Eduardo Michel Magaña</h1>
+        <p class="hero-role" data-i18n="hero.role">Computer Engineering student · Backend &amp; Automation Developer</p>
+        <p class="hero-lead" data-i18n="hero.lead">
+          I build production software for real users: web platforms with Next.js, TypeScript and PostgreSQL,
+          and AI pipelines that chain LLM agents through 90+ automated workflows. I care about
+          data integrity, clear system design and shipping things that keep working.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects" data-i18n="hero.cta">View my work</a>
+          <a class="btn btn-ghost" href="mailto:michelmm2007@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span data-i18n="hero.email">Email me</span>
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/eduard070512" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="filled"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/eduardo-michel-maga%C3%B1a" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="filled"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.5H3.5V9h3.6v11.5Z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <dl class="stats">
+          <div class="stat">
+            <dt data-i18n="stats.automations">production workflow automations</dt>
+            <dd>90+</dd>
+          </div>
+          <div class="stat">
+            <dt data-i18n="stats.apps">full-stack apps deployed</dt>
+            <dd>6</dd>
+          </div>
+          <div class="stat">
+            <dt data-i18n="stats.award">C programming contest, U. de Colima</dt>
+            <dd data-i18n="stats.awardValue">1st place</dd>
+          </div>
+          <div class="stat">
+            <dt data-i18n="stats.english">English level</dt>
+            <dd>B2</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 class="section-title" id="experience-title" data-i18n="experience.title">Experience</h2>
+
+        <article class="job">
+          <header class="job-header">
+            <div>
+              <h3 class="job-role" data-i18n="job.role">Backend &amp; Automation Developer</h3>
+              <p class="job-company">KJ Publicidad <span class="muted" data-i18n="job.companyType">· Marketing agency</span></p>
+            </div>
+            <p class="job-meta"><span data-i18n="job.dates">Jul 2026 – Present</span> · <span data-i18n="job.remote">Remote</span></p>
+          </header>
+          <ul class="job-points">
+            <li data-i18n="job.p1">Designed and maintain a <strong>Next.js + TypeScript + PostgreSQL</strong> platform that manages clients, subscriptions and content reports; migrated it from a Google Sheets prototype to a relational database.</li>
+            <li data-i18n="job.p2">Built and operate <strong>90+ n8n workflows</strong> running a multi-tenant AI content pipeline (idea generation, SEO planning, monthly editorial calendars and scriptwriting) with chained OpenAI agents exchanging <strong>structured JSON contracts</strong>.</li>
+            <li data-i18n="job.p3">Found and fixed <strong>concurrency and data-lineage bugs</strong> that were silently mixing data between tenants; every workflow change ships with backups and a rollback plan.</li>
+            <li data-i18n="job.p4">Integrated <strong>OAuth 2.0</strong> flows for TikTok (Content Posting API) and LinkedIn with automatic token refresh and CSRF-safe state, plus an AI video pipeline combining avatars, image generation, animation and text-to-speech APIs.</li>
+            <li data-i18n="job.p5">Built a video scoring model (view percentile + script structure) that matches published videos to their scripts by platform ID, title and date, so clients see which hooks actually perform.</li>
+            <li data-i18n="job.p6">Shipped an LLM-powered operations assistant used daily to run and monitor the system, with guardrails that require confirmation before any costly or destructive action; secured web-app ↔ automation traffic with shared-secret webhook authentication.</li>
+          </ul>
+          <ul class="tags" aria-label="Technologies">
+            <li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>n8n</li><li>OpenAI API</li><li>OAuth 2.0</li><li>Webhooks</li><li>Google APIs</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-title" id="projects-title" data-i18n="projects.title">Featured projects</h2>
+        <p class="section-lead" data-i18n="projects.lead">Full-stack products I designed, built and deployed end to end. Some repositories are private because they run for real businesses; live demos are linked.</p>
+
+        <div class="project-grid">
+          <article class="project">
+            <div class="project-top">
+              <h3 data-i18n="p.vendors.name">Campus Vendors Platform</h3>
+              <span class="badge" data-i18n="badge.private">Private repo</span>
+            </div>
+            <p data-i18n="p.vendors.desc">Every classroom at the university has a QR code. Students scan it, browse the menus of on-campus street vendors, and call them to the room, schedule orders or rate them. Vendors don't need the site: orders reach them through a <strong>Telegram bot</strong> with one-tap reply buttons.</p>
+            <ul class="project-points">
+              <li data-i18n="p.vendors.b1">Three installable PWAs (buyers, vendors, admin) with Web Push notifications</li>
+              <li data-i18n="p.vendors.b2">Telegram webhook with token-based account linking</li>
+            </ul>
+            <ul class="tags"><li>Next.js 16</li><li>TypeScript</li><li>PostgreSQL</li><li>Telegram Bot API</li><li>Web Push</li></ul>
+            <div class="project-links">
+              <a href="https://sistema-vendedores-theta.vercel.app" target="_blank" rel="noopener" data-i18n="link.demo">Live demo ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3>Emersion Menu</h3>
+              <span class="badge" data-i18n="badge.private">Private repo</span>
+            </div>
+            <p data-i18n="p.menu.desc">Multi-tenant SaaS where restaurants publish their digital menu and take orders without commission apps. ~14k lines of TypeScript covering ordering, loyalty cards, reservations and a 3D/AR product viewer.</p>
+            <ul class="project-points">
+              <li data-i18n="p.menu.b1">Migrated from Google Sheets to PostgreSQL (Drizzle ORM) preserving all IDs, with no changes to callers</li>
+              <li data-i18n="p.menu.b2">Passwordless customer identity via Twilio Verify SMS; prices and promos are always recomputed server-side</li>
+            </ul>
+            <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Drizzle</li><li>NextAuth</li><li>Twilio</li></ul>
+            <div class="project-links">
+              <a href="https://emersion-menu.vercel.app" target="_blank" rel="noopener" data-i18n="link.demo">Live demo ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3 data-i18n="p.pos.name">Comandera: Restaurant Order System</h3>
+              <span class="badge" data-i18n="badge.private">Private repo</span>
+            </div>
+            <p data-i18n="p.pos.desc">Order management for a restaurant with three role-based screens: waiters take orders on their phones, the kitchen display shows the oldest ticket full-screen, and an admin manages the menu and sales reports.</p>
+            <ul class="project-points">
+              <li data-i18n="p.pos.b1">Prices and options are snapshotted into each order, so editing the menu never changes past sales</li>
+              <li data-i18n="p.pos.b2">Near real-time updates without extra infrastructure; chime notifications via Web Audio</li>
+            </ul>
+            <ul class="tags"><li>Next.js 16</li><li>TypeScript</li><li>PostgreSQL</li><li>Tailwind</li></ul>
+            <div class="project-links">
+              <a href="https://proyecto-comandera.vercel.app" target="_blank" rel="noopener" data-i18n="link.demo">Live demo ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3>Dorsalwear</h3>
+              <span class="badge badge-open" data-i18n="badge.public">Open source</span>
+            </div>
+            <p data-i18n="p.shop.desc">Online store for custom sportswear. A 3D garment rotates as you scroll to show the printable areas, and each product page has a 3D viewer where customers pick colors and preview their logo.</p>
+            <ul class="project-points">
+              <li data-i18n="p.shop.b1">3D rendering with three.js and scroll animations with GSAP</li>
+              <li data-i18n="p.shop.b2">Cart, checkout through WhatsApp and an admin panel for order status</li>
+            </ul>
+            <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>three.js</li><li>GSAP</li><li>PostgreSQL</li></ul>
+            <div class="project-links">
+              <a href="https://dorsalwear.vercel.app" target="_blank" rel="noopener" data-i18n="link.demo">Live demo ↗</a>
+              <a href="https://github.com/eduard070512/Dorsalwear" target="_blank" rel="noopener" data-i18n="link.code">Code ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3 data-i18n="p.tasks.name">Pendientes: Task Manager</h3>
+              <span class="badge" data-i18n="badge.private">Private repo</span>
+            </div>
+            <p data-i18n="p.tasks.desc">Task tracking by profile, built on a serverless Postgres stack. Database migrations are generated from the Prisma schema and applied automatically on every deploy.</p>
+            <ul class="project-points">
+              <li data-i18n="p.tasks.b1">Admin session cookies signed with HMAC</li>
+            </ul>
+            <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>Neon Postgres</li></ul>
+            <div class="project-links">
+              <a href="https://registro-de-pendientes.vercel.app" target="_blank" rel="noopener" data-i18n="link.demo">Live demo ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3 data-i18n="p.content.name">AI Content Management System</h3>
+              <span class="badge" data-i18n="badge.work">Work project</span>
+            </div>
+            <p data-i18n="p.content.desc">The internal platform behind my role at KJ Publicidad: client and subscription management, per-client analytics with a Netflix-style content view, a public SEO audit tool that captures leads, and one-click control of every automation in the pipeline.</p>
+            <ul class="project-points">
+              <li data-i18n="p.content.b1">Role-based access: admins see everything, each client sees only their own stats</li>
+            </ul>
+            <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>n8n</li><li>OAuth 2.0</li></ul>
+            <div class="project-links">
+              <span class="muted" data-i18n="link.confidential">Confidential client data, no public demo</span>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="subsection-title" data-i18n="more.title">Academic &amp; earlier projects</h3>
+        <ul class="mini-grid">
+          <li class="mini">
+            <div class="mini-head"><h4 data-i18n="m.school.name">School Management System</h4><span class="mini-lang">PHP</span></div>
+            <p data-i18n="m.school.desc">Multi-user web system (admin, teacher, student) for subjects, groups, schedules and enrollment. OOP + MVC.</p>
+            <a href="https://github.com/eduard070512/Proyecto_PHP" target="_blank" rel="noopener" data-i18n="link.repo">Repository ↗</a>
+          </li>
+          <li class="mini">
+            <div class="mini-head"><h4 data-i18n="m.hardware.name">Hardware Store Point of Sale</h4><span class="mini-lang">Java</span></div>
+            <p data-i18n="m.hardware.desc">Complete, responsive point-of-sale system for a hardware store built with object-oriented design.</p>
+          </li>
+          <li class="mini">
+            <div class="mini-head"><h4 data-i18n="m.stationery.name">Stationery Point of Sale</h4><span class="mini-lang">C#</span></div>
+            <p data-i18n="m.stationery.desc">Sales, products, suppliers, user roles with login, and end-of-day cash reports.</p>
+            <a href="https://github.com/eduard070512/punto-de-venta" target="_blank" rel="noopener" data-i18n="link.repo">Repository ↗</a>
+          </li>
+          <li class="mini">
+            <div class="mini-head"><h4 data-i18n="m.autoparts.name">Auto Parts Store System</h4><span class="mini-lang">C#</span></div>
+            <p data-i18n="m.autoparts.desc">Final course project built as a team of students.</p>
+            <a href="https://github.com/Mateoorr21/Autopartes-Proyecto-Final-Equipo-1" target="_blank" rel="noopener" data-i18n="link.repo">Repository ↗</a>
+          </li>
+          <li class="mini">
+            <div class="mini-head"><h4 data-i18n="m.inventory.name">Stationery Inventory App</h4><span class="mini-lang">.NET</span></div>
+            <p data-i18n="m.inventory.desc">Desktop inventory app with login and full create, search, edit and delete operations.</p>
+            <a href="https://github.com/eduard070512/App_Proyecto_Final_Progra" target="_blank" rel="noopener" data-i18n="link.repo">Repository ↗</a>
+          </li>
+          <li class="mini">
+            <div class="mini-head"><h4 data-i18n="m.numbers.name">Number to Words Converter</h4><span class="mini-lang">.NET</span></div>
+            <p data-i18n="m.numbers.desc">Windows Forms app that converts any integer into its written Spanish form.</p>
+            <a href="https://github.com/eduard070512/leters_numbers" target="_blank" rel="noopener" data-i18n="link.repo">Repository ↗</a>
+          </li>
+          <li class="mini">
+            <div class="mini-head"><h4>RPG Dragon Repeller</h4><span class="mini-lang">JavaScript</span></div>
+            <p data-i18n="m.rpg.desc">Browser RPG built while learning the fundamentals of JavaScript and the DOM.</p>
+            <a href="https://github.com/eduard070512/RPG-Dragon-Repeller" target="_blank" rel="noopener" data-i18n="link.repo">Repository ↗</a>
+          </li>
+          <li class="mini">
+            <div class="mini-head"><h4 data-i18n="m.web.name">Stationery Store Website</h4><span class="mini-lang">HTML/CSS</span></div>
+            <p data-i18n="m.web.desc">My first static website, for a local stationery store.</p>
+            <a href="https://github.com/eduard070512/PAGINA-PAPELERIA" target="_blank" rel="noopener" data-i18n="link.repo">Repository ↗</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 class="section-title" id="skills-title" data-i18n="skills.title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 data-i18n="skills.languages">Languages</h3>
+            <ul class="tags"><li>TypeScript</li><li>JavaScript</li><li>Java</li><li>C#</li><li>C</li><li>Python</li><li>PHP</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.web">Web &amp; backend</h3>
+            <ul class="tags"><li>Next.js</li><li>React</li><li>Node.js</li><li>REST APIs</li><li>OAuth 2.0</li><li>Webhooks</li><li>Tailwind CSS</li><li>HTML / CSS</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.data">Databases</h3>
+            <ul class="tags"><li>PostgreSQL</li><li>Prisma</li><li>Drizzle ORM</li><li data-i18n="skills.modeling">Data modeling</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.ai">AI &amp; automation</h3>
+            <ul class="tags"><li data-i18n="skills.llm">LLM agents</li><li>OpenAI API</li><li data-i18n="skills.json">Structured JSON outputs</li><li>n8n</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.tools">Tools &amp; platforms</h3>
+            <ul class="tags"><li>Git</li><li>GitHub</li><li>Vercel</li><li>Telegram Bot API</li><li>Twilio</li><li>Google APIs</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.cs">Fundamentals</h3>
+            <ul class="tags"><li data-i18n="skills.oop">Object-oriented design</li><li>MVC</li><li data-i18n="skills.concurrency">Concurrency debugging</li><li data-i18n="skills.security">Auth &amp; web security</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <h2 class="section-title" id="education-title" data-i18n="education.title">Education &amp; achievements</h2>
+        <div class="edu-grid">
+          <article class="edu">
+            <p class="edu-dates" data-i18n="edu.uni.dates">Aug 2025 – Present</p>
+            <h3 data-i18n="edu.uni.degree">B.Eng. in Intelligent Computing Engineering</h3>
+            <p class="muted">Universidad de Colima · Colima, México</p>
+          </article>
+          <article class="edu">
+            <p class="edu-dates">2022 – 2025</p>
+            <h3 data-i18n="edu.hs.degree">Technical High School Diploma, Programmer Analyst</h3>
+            <p class="muted">Universidad de Colima</p>
+          </article>
+          <article class="edu edu-award">
+            <p class="edu-dates" data-i18n="edu.award.dates">March 2025</p>
+            <h3 data-i18n="edu.award.title">1st place, C Programming Competition</h3>
+            <p class="muted">Universidad de Colima</p>
+          </article>
+          <article class="edu">
+            <p class="edu-dates" data-i18n="edu.lang.label">Languages</p>
+            <h3 data-i18n="edu.lang.list">Spanish (native) · English (B2) · German (A1)</h3>
+            <p class="muted" data-i18n="edu.lang.note">Comfortable reading technical documentation and working in English.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <h2 class="section-title" id="contact-title" data-i18n="contact.title">Let's work together</h2>
+        <p class="section-lead" data-i18n="contact.lead">I'm looking for a software engineering internship where I can learn from strong teams and contribute from day one. The fastest way to reach me is email.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:michelmm2007@gmail.com">michelmm2007@gmail.com</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/eduardo-michel-maga%C3%B1a" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/eduard070512" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p class="muted location">📍 Villa de Álvarez, Colima, México</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Eduardo Michel Magaña</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
